@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume Analysis Results for {{name}}</title>
+    <style>
+        /* CSS for centering the container */
+        .container {
+
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center; /* Add this line */
+        }
+
+        /* CSS for formatting the summary */
+        .summary {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Resume Analysis Results for {{name}}</h1>
+
+            <h2>Cannadate Match:</h2>
+            <h1>{{score}}</h1>
+
+            <h2>Summary:</h2>
+            <p class="summary">{{summary}}</p>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  $("#div2").toggle();
+                });
+              });
+            </script>
+          </head>
+          <body>
+            <div id="div1">
+              <p>See how {{name}} compared to other applicants:</p>
+            </div>
+            <div id="div2" style="display:none;">
+              <p>{{comp_score}}</p>
+            </div>
+            <button>Compare Results</button>
+
+        </div>
+    </div>
+</body>
+</html>
